@@ -1,6 +1,6 @@
 ## Routing Optimisation Application
 
-The goal of an application is to collect as much as possible different beer types and display travel itinerary based on a given home (lat/long) geocode.
+The goal of an application is to collect as many as possible different beer types and display travel itinerary based on a given home (lat/long) geocode.
 
 ## How To Start Application
 
