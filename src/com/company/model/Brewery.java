@@ -9,6 +9,7 @@ public class Brewery {
     private String name;
     private double latitude;
     private double longitude;
+    private int distance;
     private List<Beer> beerList = new ArrayList<>();
 
     public int getId() {
@@ -55,8 +56,13 @@ public class Brewery {
         this.longitude = longitude;
     }
 
-    public int getBeerAssortmentSize(){
-        return beerList.size();
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
     }
 
     @Override

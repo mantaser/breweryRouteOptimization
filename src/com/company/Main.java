@@ -1,35 +1,23 @@
 package com.company;
 
-public class Main {
+import java.util.Scanner;
 
+public class Main {
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
         // Scanner methods
+        System.out.println("Insert home latitude");
+        double homeLat = scanner.nextDouble(); scanner.nextLine();
+        System.out.println("Insert home longitude");
+        double homeLong = scanner.nextDouble(); scanner.nextLine();
+
 
         // Testing code
-        Helicopter helicopter = new Helicopter("Helicopter-X",2000);
+        Helicopter helicopter = new Helicopter("Helicopter-X",homeLat,homeLong);
+        helicopter.startTravel();
 
 
     }
-
-//    private static void assignBeersToBreweries(List<Brewery> breweries, List<Beer> beers) {
-//        int j = 0; // current beer
-//        beers.sort(Comparator.comparing(Beer::getBreweryId));
-//        for (Brewery brewery : breweries) {
-//            for (int i = j; i < beers.size(); i++) {
-////                if (brewery.getId() < beers.get(i).getBreweryId()) {
-////                    break;
-////                }
-//                if (beers.get(i).getBreweryId() == brewery.getId()) {
-//                    brewery.addBeer(beers.get(i));
-//                    j++;
-//                } else {
-//                    System.out.println("brewery id " + brewery.getId() + ", beer id " + beers.get(i).getId() + ", j = " + j);
-//                    break;
-//                }
-//            }
-//        }
-//    }
-
 
 }

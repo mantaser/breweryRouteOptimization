@@ -48,7 +48,7 @@ public class Datasource {
     // SELECT breweries.id, breweries.name, geocodes.latitude, geocodes.longitude FROM breweries INNER JOIN geocodes ON
     // breweries.id = geocodes.brewery_id
     public static final String QUERY_BREWERIES_ON_GEOCODES = "SELECT " + TABLE_BREWERIES + "." + COLUMN_BREWERIES_ID + ", "
-            + TABLE_BREWERIES + "." + COLUMN_BREWERIES_NAME + ", "+ TABLE_GEOCODES + "." + COLUMN_GEOCODES_LATITUDE + ", "
+            + TABLE_BREWERIES + "." + COLUMN_BREWERIES_NAME + ", " + TABLE_GEOCODES + "." + COLUMN_GEOCODES_LATITUDE + ", "
             + TABLE_GEOCODES + "." + COLUMN_GEOCODES_LONGITUDE +
             " FROM " + TABLE_BREWERIES + " INNER JOIN " + TABLE_GEOCODES + " ON " + TABLE_BREWERIES + "." +
             COLUMN_BREWERIES_ID + " = " + TABLE_GEOCODES + "." + COLUMN_GEOCODES_BREWERY_ID;
@@ -74,26 +74,7 @@ public class Datasource {
             System.out.println("Couldn't close connection: " + e.getMessage());
         }
     }
-//
-//    public List<Dot> queryDots() {
-//        try (Statement statement = conn.createStatement();
-//             ResultSet results = statement.executeQuery("SELECT * FROM " + TABLE_GEOCODES)) {
-//
-//            List<Dot> dots = new ArrayList<>();
-//            while (results.next()) {
-//                Dot dot = new Dot();
-//                dot.setId(results.getInt(INDEX_GEOCODES_ID));
-//                dot.setBreweryId(results.getInt(INDEX_GEOCODES_BREWERY_ID));
-//                dot.setLatitude(results.getDouble(INDEX_GEOCODES_LATITUDE));
-//                dot.setLongitude(results.getDouble(INDEX_GEOCODES_LONGITUDE));
-//                dots.add(dot);
-//            }
-//            return dots;
-//        } catch (SQLException e) {
-//            System.out.println("Query failed: " + e.getMessage());
-//            return null;
-//        }
-//    }
+
 
     public List<Beer> queryBeers() {
         try (Statement statement = conn.createStatement();
